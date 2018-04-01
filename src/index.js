@@ -90,9 +90,11 @@ class Calendar {
 
   renderDateCol = (tr, date, key) => {
     const td = document.createElement('td');
-    td.className = 'calendar__date';
 
-    if (key % 6 === 0) td.className += ' calendar__date--weekend'
+    if (date) {
+      td.className = 'calendar__date';
+      key % 6 === 0 && (td.className += ' calendar__date--weekend')
+    }
 
     td.innerHTML = date;
     tr.appendChild(td);
