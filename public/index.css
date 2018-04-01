@@ -1,0 +1,80 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+}
+
+td, th {
+  padding: 1rem;
+}
+
+.calendar {
+  align-items: center;
+  display: flex;
+  flex-flow: row wrap;
+  position: relative;
+  text-align: center;
+}
+
+.calendar__title,
+.calendar__nav,
+.calendar__table-wrapper {
+  flex: 1 100%;
+}
+
+.calendar__title {
+  text-align: center;
+}
+
+.calendar__nav {
+  flex: auto;
+  padding: 0 2rem;
+}
+
+.calendar__nav button {
+  padding: 1rem;
+  background: #ddd;
+  border: none;
+  border-radius: 50%;
+  color: #fff;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: bold;
+  letter-spacing: -2px;
+}
+
+.calendar__nav--prev {
+  text-align: right;
+}
+
+.calendar__nav--next {
+  text-align: left;
+}
+
+.calendar__table-wrapper {
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  display: inline-block;
+  flex: 1;
+  padding: 0.5rem;
+}
+
+.calendar__table {
+  border-collapse: collapse;
+  text-align: right;
+}
+
+.calendar__days {
+  border-bottom: 1px solid #ddd;
+}
+
+.calendar__date:hover {
+  background: #ddd;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.calendar__day--weekend,
+.calendar__date--weekend {
+  color: red;
+}
